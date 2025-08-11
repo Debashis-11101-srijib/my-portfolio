@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github,  Smartphone, Globe, Award, Lock } from 'lucide-react'; 
+import { ExternalLink, Github, Smartphone, Globe, Award, Lock } from 'lucide-react'; 
 
 const Projects = () => {
   const projects = [
@@ -8,23 +8,23 @@ const Projects = () => {
       id: 1,
       title: 'E-Commerce Platform (Darsh)',
       description: 'A full-stack e-commerce solution developed with React.js for the frontend, Node.js with Express for the backend, and MongoDB. Features optimized API endpoints (40% faster) and integrated Cloudinary for 1,000+ product images, leading to a significant monthly revenue increase.',
-      image: './Img/darsh.png', 
+      image: './Img/darsh.png',
       tags: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Cloudinary', 'Scalability'],
       icon: Globe,
       color: 'from-blue-500 to-purple-600',
-      githubLink: '#', 
+      githubLink: '',
       demoLink: 'https://www.darshsaree.com/',
-      isPrivate: true 
+      isPrivate: true
     },
     {
       id: 2,
       title: 'Ayushvaani Healthcare Portal (Frontend)',
       description: 'Developed the responsive and intuitive user interface for a healthcare portal. Focused on creating seamless patient and doctor dashboards, appointment booking flows, and accessible health resource displays using modern frontend technologies.',
-      image: './Img/ayush.png', 
+      image: './Img/ayush.png',
       tags: ['React', 'Tailwind CSS', 'UI/UX', 'Frontend', 'Responsive Design', 'API Integration'],
       icon: Smartphone,
       color: 'from-green-500 to-teal-600',
-      githubLink: 'https://github.com/yourusername/ayushvaani-frontend', 
+      githubLink: 'https://github.com/yourusername/ayushvaani-frontend',
       demoLink: 'https://aayushvaani.clinicalaiassistance.com/',
       isPrivate: true
     },
@@ -32,12 +32,12 @@ const Projects = () => {
       id: 3,
       title: 'Annual College Fest Portal',
       description: 'Designed and implemented a comprehensive web portal for annual college festivals. Features included event registration, detailed schedules, live updates, photo galleries, and an administrative panel for event management and attendee data handling.',
-      image: './Img/alfresco.png', 
-      tags: ['React', 'Tailwind CSS', 'Event Management', 'UI/UX',  'Responsive Design'],
-      icon: Award, 
+      image: './Img/alfresco.png',
+      tags: ['React', 'Tailwind CSS', 'Event Management', 'UI/UX', 'Responsive Design'],
+      icon: Award,
       color: 'from-orange-500 to-red-600',
-      githubLink: 'https://github.com/yourusername/college-fest-portal', 
-      demoLink: 'https://www.alfresco.co.in/' 
+      githubLink: 'https://github.com/yourusername/college-fest-portal',
+      demoLink: 'https://www.alfresco.co.in/'
     }
   ];
 
@@ -89,7 +89,6 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-black via-purple-900 to-gray-900 relative overflow-hidden">
-      {/* Galaxy Background */}
       <div className="absolute inset-0">
         <motion.div
           className="absolute inset-0 opacity-20"
@@ -107,7 +106,6 @@ const Projects = () => {
           }}
         />
 
-        {/* Floating particles */}
         {Array.from({ length: 15 }).map((_, i) => (
           <motion.div
             key={i}
@@ -132,7 +130,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -141,7 +139,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
+            className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -149,9 +147,8 @@ const Projects = () => {
           >
             Featured Projects
           </motion.h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A showcase of my recent work, demonstrating expertise across
-            different technologies and problem-solving approaches.
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            A showcase of my recent work. Click on any project to explore more details.
           </p>
         </motion.div>
 
@@ -170,9 +167,10 @@ const Projects = () => {
 };
 
 const ProjectCard = ({ project, index }) => {
-  const [isFlipped, setIsFlipped] = React.useState(false);
-  const [swipeState, setSwipeState] = React.useState('initial');
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [swipeState, setSwipeState] = useState('initial');
   const [privateMessage, setPrivateMessage] = useState(''); 
+
   const cardVariants = {
     initial: {
       rotateY: 0,
@@ -182,13 +180,20 @@ const ProjectCard = ({ project, index }) => {
       opacity: 1
     },
     hover: {
-      rotateY: 15,
-      scale: 1.05,
-      z: 50,
-      boxShadow: "0 25px 50px rgba(139, 92, 246, 0.3)",
+      rotateY: 5,
+      scale: 1.03,
+      z: 30,
+      boxShadow: "0 20px 40px rgba(139, 92, 246, 0.2)",
       transition: {
-        duration: 0.4,
+        duration: 0.3,
         ease: "easeOut"
+      }
+    },
+    tap: {
+      rotateY: 0,
+      scale: 0.98,
+      transition: {
+        duration: 0.1
       }
     },
     swipeOut: {
@@ -227,16 +232,16 @@ const ProjectCard = ({ project, index }) => {
       className="group relative perspective-1000"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: index * 0.2 }}
-      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: index * 0.15 }}
+      viewport={{ once: true, amount: 0.2 }}
       style={{ perspective: '1000px' }}
     >
       <motion.div
-        className="bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden cursor-pointer border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+        className="bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden cursor-pointer border border-white/20 hover:border-purple-400/50 transition-all duration-300 h-full flex flex-col"
         variants={cardVariants}
         initial="initial"
         whileHover="hover"
-        animate={swipeState}
+        whileTap="tap"
         style={{
           transformStyle: 'preserve-3d',
         }}
@@ -259,7 +264,7 @@ const ProjectCard = ({ project, index }) => {
               whileHover={{ scale: 1, rotate: 0 }}
               transition={{ delay: 0.1, duration: 0.3 }}
             >
-              <project.icon className="w-12 h-12 mx-auto mb-2" />
+              {project.icon && <project.icon className="w-12 h-12 mx-auto mb-2" />}
               <p className="font-semibold">Explore Project</p>
             </motion.div>
           </motion.div>
@@ -287,9 +292,8 @@ const ProjectCard = ({ project, index }) => {
           </div>
         </div>
 
-        {/* Project Content */}
         <motion.div
-          className="p-6"
+          className="p-6 flex flex-col flex-grow"
           style={{
             transform: 'translateZ(50px)',
           }}
@@ -301,7 +305,7 @@ const ProjectCard = ({ project, index }) => {
             {project.title}
           </motion.h3>
 
-          <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+          <p className="text-gray-300 mb-4 text-sm leading-relaxed flex-grow">
             {project.description}
           </p>
 
@@ -309,7 +313,8 @@ const ProjectCard = ({ project, index }) => {
             className="flex flex-wrap gap-2 mb-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             {project.tags.map((tag, tagIndex) => (
               <motion.span
@@ -317,7 +322,8 @@ const ProjectCard = ({ project, index }) => {
                 className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs font-medium border border-purple-400/30"
                 initial={{ scale: 0, rotate: 180 }}
                 whileInView={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.4 + tagIndex * 0.1 }}
+                transition={{ delay: 0.3 + tagIndex * 0.05 }}
+                viewport={{ once: true, amount: 0.5 }}
                 whileHover={{
                   scale: 1.1,
                   backgroundColor: 'rgba(139, 92, 246, 0.3)',
@@ -329,11 +335,10 @@ const ProjectCard = ({ project, index }) => {
             ))}
           </motion.div>
 
-          {/* Action Buttons */}
-          <div className="flex space-x-3">
+          <div className="flex space-x-3 mt-auto">
             {project.isPrivate ? (
               <motion.button
-                className="flex-1 bg-gray-700/50 text-gray-400 px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm font-medium cursor-not-allowed border border-gray-600"
+                className="flex-1 bg-gray-700/50 text-gray-50 whitespace-nowrap md:text-gray-400 px-4 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm font-medium cursor-not-allowed border border-gray-600"
                 whileHover={{ scale: 1 }} 
                 whileTap={{ scale: 1 }}
                 onClick={handlePrivateGithubClick}

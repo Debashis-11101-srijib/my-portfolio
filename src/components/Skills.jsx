@@ -13,15 +13,12 @@ const Skills = () => {
     backend: [
       { name: 'Node.js', level: 85, color: 'from-green-500 to-green-600' },
       { name: 'Express.js', level: 85, color: 'from-gray-700 to-gray-600' },
-      { name: 'Python', level: 80, color: 'from-blue-700 to-blue-500' },
-      { name: 'REST', level: 85, color: 'from-purple-500 to-pink-500' },
       { name: 'MongoDB', level: 80, color: 'from-green-700 to-lime-600' },
       { name: 'SQL', level: 75, color: 'from-indigo-600 to-blue-500' },
     ],
     tools: [
       { name: 'Git', level: 90, color: 'from-orange-500 to-red-600', icon: '🐙' },
       { name: 'GitHub', level: 90, color: 'from-gray-800 to-gray-600', icon: '🔗' },
-      { name: 'Random Forest', level: 70, color: 'from-emerald-500 to-lime-500', icon: '🌳' },
        { name: 'VS Code', level: 95, color: 'from-blue-600 to-blue-700', icon: '💻' },
       { name: 'C/C++', level: 70, color: 'from-blue-700 to-indigo-700', icon: '⚙️' },
       { name: 'Java', level: 60, color: 'from-red-500 to-orange-500', icon: '☕' },

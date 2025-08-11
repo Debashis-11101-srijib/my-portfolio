@@ -67,7 +67,7 @@ const About = () => {
             About Me
           </motion.h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
-            I'm a highly motivated and results-driven Full Stack Web Developer with 1.5+ years of experience in designing, developing, and deploying robust web applications. My focus is on delivering scalable and efficient solutions while continuously embracing new technologies.
+            I'm a highly motivated and results-driven Full Stack Web Developer with 1.5+ years of experience in designing, developing.
           </p>
         </motion.div>
 
@@ -111,11 +111,10 @@ const About = () => {
               My Journey
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-gray-200 mb-4 sm:mb-6 leading-relaxed">
-              My professional journey began with developing an e-commerce platform, where I utilized React.js for the frontend, Node.js with Express for the backend, and MongoDB for the database. This experience significantly enhanced platform scalability by optimizing API endpoints, reducing response times by 40%, and enabling the platform to handle high traffic with minimal latency.
+              My professional journey began with developing an e-commerce platform, where I utilized React.js for the frontend, Node.js with Express for the backend, and MongoDB for the database.
             </p>
             <p className="text-sm sm:text-base md:text-lg text-gray-200 mb-6 sm:mb-8 leading-relaxed">
-              I am proficient in various technologies including HTML, CSS, JavaScript, React, Node.js, SQL, MongoDB, Git, GitHub, Python, and more, always aiming for clean, maintainable, and efficient code.
-            </p>
+This experience significantly enhanced platform scalability by optimizing API endpoints, reducing response times by 40%, and enabling the platform to handle high traffic with minimal latency.            </p>
 
             <motion.div
               className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3"

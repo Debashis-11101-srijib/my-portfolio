@@ -41,7 +41,7 @@ import { Code2, Sparkles, Zap } from 'lucide-react';
   }, [onComplete, loadingTexts.length]); 
 
   return (
-    <AnimatePresence>
+    <AnimatePresence >
       {!isComplete && (
         <motion.div
           className="fixed inset-0 z-50 bg-gradient-to-br from-gray-900 via-black to-purple-900 flex items-center justify-center overflow-hidden"

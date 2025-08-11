@@ -29,7 +29,7 @@ const Resume = () => {
       school: "Government College of Engineering and Textile Technology, Berhampore",
       location: "Berhampore, West Bengal",
       period: "Oct 2021 - Jun 2025",
-      gpa: "7.98/10.0", 
+      gpa: "N/A", 
       percentage: "N/A", 
       achievements: ["Data Structures", "Algorithms", "Databases", "Web Technologies", "Software Engineering"]
     },
@@ -39,7 +39,7 @@ const Resume = () => {
       location: "Aiho, Malda, West Bengal",
       period: "Sep 2021", 
       gpa: "N/A",
-      percentage: "80.6%", 
+      percentage: "N/A", 
       achievements: ["Science Stream", "Mathematics", "Physics", "Chemistry"]
     },
     {
@@ -48,7 +48,7 @@ const Resume = () => {
       location: "Aiho, Malda, West Bengal",
       period: "Sep 2019", 
       gpa: "N/A",
-      percentage: "76.85%", 
+      percentage: "N/A", 
       achievements: ["Distinction in Science", "Computer Fundamentals"]
     }
   ];
