@@ -61,7 +61,7 @@ const Resume = () => {
 
 
   const handleDownloadResume = () => {
-    const resumePath = "./Img/Debashis_Paul_Resume (4).pdf"; 
+    const resumePath = "./Img/DebashisPaulResume.pdf"; 
     const fileName = "Debashis_Paul_Resume.pdf"; 
 
     const link = document.createElement('a');

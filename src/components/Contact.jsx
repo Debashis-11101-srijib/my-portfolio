@@ -313,7 +313,7 @@ const Contact = () => {
             </div>
 
             <motion.a
-              href="https://github.com/Debashis-11101-srijib" 
+              href="https://github.com/Debashis-11101-srijib/my-portfolio" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-3 sm:space-x-4 text-white hover:text-cyan-300 transition-colors group pt-4 sm:pt-6"

@@ -13,7 +13,7 @@
 ## ✨ Live Demo
 
 Explore the live version of my portfolio here:
-[**🚀 View Live Portfolio**](https://debashispaul.github.io) 
+[**🚀 View Live Portfolio**](https://debashis-11101-srijib.github.io/my-portfolio/) 
 
 ---
 
@@ -66,13 +66,13 @@ Follow these instructions to get a copy of the project up and running on your lo
 ### Prerequisites
 
 * Node.js (LTS version recommended)
-* npm or Yarn
+* npm (Node Package Manager)
 
 ### Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Debashis-11101-srijib/debashispaul.github.io.git](https://github.com/Debashis-11101-srijib/debashispaul.github.io.git)
+    git clone git@github.com:Debashis-11101-srijib/my-portfolio.git
     ```
 2.  **Navigate into the project directory:**
     ```bash
